@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Info</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    .info-table td:first-child {
+      background-color: #dee2e6; /* Gray left column */
+      border: 1px solid #ced4da;
+      width: 40%;
+      font-weight: 500;
+    }
+    .info-table tr:nth-child(odd) td:last-child {
+      background-color: #f8f9fa; /* Striped light gray for right column */
+    }
+    .info-table tr:nth-child(even) td:last-child {
+      background-color: #ffffff; /* White for alternate rows */
+    }
+    .table-bordered th {
+    background-color: #dee2e6;
+    border: 1px solid #ced4da;
+  }
+  .striped-section tr:nth-child(odd) td{
+  background-color: #f8f9fa; /* Light gray */
+}
+.striped-section tr:nth-child(even) td{
+  background-color: #ffffff; /* White */
+}
+.custom-bordered td {
+  border: 1px solid #b1b3b6;
+}
+.inner-table-wrapper {
+  padding: 15px;
+}
+.text-orange{
+    color:orange;
+}
+.view-more-btn.clicked {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid orange;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <div class="row g-4">
+        <!---card 1-->
+        <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-header bg-light">
+        <h5 class="card-title mb-0">
+          <i class="bi bi-cpu-fill text-orange"></i> Device Information
+        </h5><hr>
+        <small class="text-muted">On this page, you can view basic device information</small>
+      </div>
+      <div class="card-body p-3">
+        
+        <table class="table m-0 info-table" >
+          <tbody>
+            <tr>
+              <td>Device Name</td>
+              <td>SY-GPON-201D-WADONT</td>
+            </tr>
+            <tr>
+              <td>Serial Number</td>
+              <td>GPON195F5468</td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td>"DUAL BAND+ 2GE+1POTS+1USB+XPON"</td>
+            </tr>
+            <tr>
+              <td>Hardware Version</td>
+              <td>RTL960x</td>
+            </tr>
+          </tbody>
+        </table>
+      
+  
+    </div>
+      <div class="card-footer text-start bg-white border-0">
+        <button class="btn btn-warning view-more-btn"  data-bs-toggle="modal" data-bs-target="#modal1" style="color: white;background-color: orange">View More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fw-bold" id="ModalLabel">
+          <i class="bi bi-cpu-fill text-orange"></i> Device Information
+        </h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>On this page, you can view basic device information</p>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th>Device Name</th>
+              <td class="table-striped table-active">SY-GPON-201D-WADONT</td>
+            </tr>
+            <tr>
+              <th>Serial Number</th>
+              <td class="table-striped">GPON195F5468</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td class="table-striped table-active">"DUAL BAND+ 2GE+1POTS+1USB+XPON"</td>
+            </tr>
+            <tr>
+              <th>MAC Address</th>
+              <td class="table-striped">0411195F5468</td>
+            </tr>
+            <tr>
+              <th>IP Address</th>
+              <td class="table-striped table-active">192.168.1.1</td>
+            </tr>
+            <tr>
+              <th>IPv6 Link-Local Address</th>
+              <td class="table-striped">fe80::1/64</td>
+            </tr>
+            <tr>
+              <th>Hardware Version</th>
+              <td class="table-striped ">RTL960x</td>
+            </tr>
+            <tr>
+              <th>Firmware Version</th>
+              <td class="table-striped table-active">SY-V1.0.0-250515</td>
+            </tr>
+            <tr>
+              <th>Manufacture Info</th>
+              <td class="table-striped">Syrotech</td>
+            </tr>
+            <tr>
+              <th>Working Mode</th>
+              <td class="table-striped table-active">EPON</td>
+            </tr>
+            <tr>
+              <th>CPU Usage</th>
+              <td class="table-striped table-active">1%</td>
+            </tr>
+            <tr>
+              <th>Memory Usage</th>
+              <td class="table-striped table-active">6%</td>
+            </tr>
+            <tr>
+              <th>Compile Time</th>
+              <td class="table-striped">Thu May 15 16:28:05 CST 2025</td>
+            </tr>
+            <tr>
+              <th>Current Time</th>
+              <td class="table-striped table-active">Year "1970" "Mon" "1" Day "1" Hour "5" Min "35" Sec "56"</td>
+            </tr>
+            <tr>
+              <th>Uptime</th>
+              <td class="table-striped">5 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+     
+    </div>
+  </div>
+</div>
+
+  <!--card 2-->
+  <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header bg-light">
+            <h5 class="card-title mb-0">
+              <i class="bi bi-router-fill text-orange"></i> WAN Information
+            </h5><hr>
+            <small class="text-muted">you can query the connector and line status of the WAN port</small>
+          </div>
+          <div class="card-body p-2">
+            <table class="table info-table">
+              <tbody>
+                <tr><td>Connection Type</td><td>Other</td></tr>
+                <tr><td>Status</td><td>up</td></tr>
+                <tr><td>IP Address</td><td></td></tr>
+                <tr><td>Gateway</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-start bg-white border-0">
+            <button class="btn btn-warning view-more-btn"  data-bs-toggle="modal" data-bs-target="#modal2" style="color: white;background-color: orange">View More</button>
+          </div>
+        </div>
+      </div>
+
+     <!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalLabel2"><i class="bi bi-router-fill text-orange"></i> WAN Information</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>On this page, you can query the connection and line status of the WAN port</p>
+        <p><b>IPv4  Information(Click the form for details)</b></p>
+        <div class="table-responsive">
+        <table class=" table table-bordered">
+            <tbody>
+                <tr>
+                    <th>Interface</th>
+                    <th>VLAN ID</th>
+                    <th>Connection Type</th>
+                    <th>Protocol</th>
+                    <th>MAC</th>
+                    <th>IP Address</th>
+                    <th>Gateway</th>
+                    <th>Status</th>
+                </tr>
+                <tr class="table-active custom-bordered">
+                   <td>nas0_0</td> 
+                   <td>0</td> 
+                   <td>Other</td> 
+                   <td>Bridged</td> 
+                   <td>04:11:19:5f:54:69</td> 
+                   <td></td> 
+                   <td></td> 
+                   <td>up</td> 
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <p><b>IPv6 Information(Click the form for details)</b></p>
+        <div class="table-responsive">
+        <table class="table table-bordered">
+            <tbody>
+                <th>Interface</th>
+                    <th>VLAN ID</th>
+                    <th>Connection Type</th>
+                    <th>Protocol</th>
+                    <th>IP Address</th>
+                    <th>Status</th>
+            </tbody>
+        </table>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+ 
+      <!--card 3-->
+
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header bg-light">
+            <h5 class="card-title mb-0">
+              <i class="bi bi-plug-fill text-orange"></i> PON Status
+            </h5><hr>
+            <small class="text-muted">This page shows the current system status of PON</small>
+          </div>
+          <div class="card-body p-2">
+            <table class="table info-table">
+              <tbody>
+                <tr><td>Working Mode</td><td>EPON</td></tr>
+                <tr><td>Vendor Name</td><td>SYRO</td></tr>
+                <tr><td>Part Number</td><td>CLASS B+</td></tr>
+                <tr><td>Rx Power</td><td>-inf dBm</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-start bg-white border-0">
+            <button class="btn btn-warning view-more-btn"  data-bs-toggle="modal" data-bs-target="#modal3" style="color: white;background-color: orange">View More</button>
+          </div>
+        </div>
+      </div>
+      <!--modal 3-->
+      <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fw-bold" id="ModalLabel">
+          <i class="bi bi-plug-fill text-orange"></i> PON Optical Information
+        </h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>On this page, you can query the status of the optical module.</p>
+
+        <table class="table table-bordered striped-section">
+          <tbody>
+            
+            <tr class="table-secondary" >
+              <th colspan="3"style="color:orange">Network Link Connection Information</th>
+            </tr>
+            <tr>
+              <th>Working Mode</th>
+              <td colspan="2">EPON</td>
+            </tr>
+            <tr>
+              <th>FEC Errors</th>
+              <td colspan="2">0</td>
+            </tr>
+            <tr>
+              <th>Part Number</th>
+              <td colspan="2">CLASS B+</td>
+            </tr>
+            <tr>
+              <th>Vendor Name</th>
+              <td colspan="2">SYRO</td>
+            </tr>
+          
+            <tr class="table-secondary">
+              <th colspan="3" style="color:orange">Link Performance Statistics</th>
+            </tr>
+            <tr>
+              <th>Number Of Packets PON Port Sent</th>
+              <td colspan="2">0</td>
+            </tr>
+            <tr>
+              <th>Number Of Packets PON Port Received</th>
+              <td colspan="2">0</td>
+            </tr>
+         
+            <tr class="table-secondary">
+              <th colspan="3" style="color:orange">Light Module Information</th>
+            </tr>
+            <tr class="table-light">
+              <th>Optical Information</th>
+              <th>Current Value</th>
+              <th>Reference Value</th>
+            </tr>
+            
+            <tr>
+              <th>Rx Power</th>
+              <td class="border-end-0">-inf dBm</td>
+              <td class="border-start-0">-27 to -7 dBm</td>
+            </tr>
+            <tr>
+              <th>Tx Power</th>
+              <td class="border-end-0">-inf dBm</td>
+              <td class="border-start-0">0.5 to 5 dBm</td>
+            </tr>
+            <tr>
+              <th>Voltage</th>
+              <td class="border-end-0">3.369600 V</td>
+              <td class="border-start-0">3100 to 3500 mV</td>
+            </tr>
+            <tr>
+              <th>Bias Current</th>
+              <td class="border-end-0">0.002000 mA</td>
+              <td class="border-start-0">0 to 90 mA</td>
+            </tr>
+            <tr>
+              <th>Temperature</th>
+              <td class="border-end-0">28.558594 °C</td>
+              <td class="border-start-0">-5 to +55 °C</td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+      <!---card 4-->
+
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header bg-light">
+            <h5 class="card-title mb-0">
+              <i class="bi bi-telephone-fill text-orange"></i> Voice Info
+            </h5><hr>
+            <small class="text-muted">Status information of voice users and reset the voice function</small>
+          </div>
+          <div class="card-body p-2">
+            <table class="table info-table">
+              <tbody>
+                <tr><td>Display Name</td><td></td></tr>
+                <tr><td>Number</td><td>1</td></tr>
+                <tr><td>Associated POTS Port</td><td></td></tr>
+                <tr><td>Status</td><td>Disabled</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-start bg-white border-0">
+            <button class="btn btn-warning view-more-btn"  data-bs-toggle="modal" data-bs-target="#modal4" style="color: white;background-color: orange">View More</button>
+          </div>
+        </div>
+      </div>
+   
+  
+<!--modal 4-->
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalLabel4"><i class="bi bi-telephone-fill text-orange"></i> Voice Info</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Status information of voice users and reset the voice</p>
+        
+        <div class="table-responsive">
+        <table class=" table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="text-center align-middle">Proxy0 Addr</td>
+                    <td class="text-center align-middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">Proxy0 Port Number</td>
+                    <td class="text-center align-middle">5060</td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">Proxy1 Addr</td>
+                    <td class="text-center align-middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">Proxy1 Port Number</td>
+                    <td class="text-center align-middle">5060</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        </div>
+
+        <div class="table-responsive">
+        <table class="table table-bordered custom-bordered">
+            <tbody>
+                <tr>
+                <td class="table-active text-center">Name</td>
+                    <td class="table-active text-center">Line</td>
+                    </tr>
+                    <tr>
+                    <td class="table-active text-center">Port</td>
+                    <td class="table-active text-center">1</td>
+                    </tr>
+                    <tr>
+                        <td class="table-active text-center">Number</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <td class="table-active text-center">Status</td>
+                    <td class="bg-light text-center">Disabled</td>
+                    </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!--card 5-->
+
+ <div class="card shadow">
+          <div class="card-header bg-light">
+            <h5 class="card-title mb-0">
+             <i class="bi bi-wifi text-orange"></i> User Info</h5>
+  <hr>
+  <small class="text-muted">On this page you can query the WLAN information & user-side Ethernet port information</small></div>
+  <div class="card-body p-2">
+    <p style="color: orange;"><b>WIFI Devices</b></p>
+    <div class="table-responsive">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>MAC Address</th>
+                <th>Tx Packets</th>
+                <th>Rx Packets</th>
+                <th>Tx Rate(Mbps)</th>
+                <th>RSSI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>Power Saving</th>
+                <th>Expired Time(sec)</th>
+                <th>Operations</th>
+            </tr>
+            <tr>
+                <td>None</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td><button class="btn btn-primary" style="background-color: orange; border: orange;">Application</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
+    <p style="color: orange;"><b>WIRED Devices</b></p>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>IP Address</th>
+                <th>MAC Address</th>
+                <th>Expired Time(sec)</th>
+                <th>Operations</th>
+            </tr>
+            <tr>
+                <td>192.108.1.2</td>
+                <td>e0:be:09:65:ce:1b</td>
+                <td>80252</td>
+                <td><button class="btn btn-primary" style="background-color: orange; border: orange;">Application</button></td>
+            </tr>
+        </tbody>
+    </table>
+     <div class="card-footer text-start bg-white border-0">
+            <button class="btn btn-warning view-more-btn"  data-bs-toggle="modal" data-bs-target="#wlanModal" style="color: white;background-color: orange">View More</button>
+          </div>
+</div>
+    </div>
+
+<!--modal 5-->
+<div class="modal fade" id="wlanModal" tabindex="-1" aria-labelledby="wlanModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+    
+      <div class="modal-header">
+        <h3 class="modal-title fw-bold" id="wlanModalLabel">
+           <i class="bi bi-wifi  text-orange"></i> WLAN Information
+        </h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+     
+      <div class="modal-body">
+        <p>On this page, you can query the WLAN information, WLAN packet statistics, and SSID information.</p>
+
+        
+        <table class="table table-bordered">
+            <tbody>
+           <tr>
+            <td colspan="3"><button class="btn btn-warning fw-bold">Ethernet Port Status</button></td>
+           <td colspan="3"> <button class="btn btn-warning fw-bold">USB Port Status</button></td>
+           </tr>
+          <tr>
+            <td colspan="3"><label class="form-check-label me-3">
+              <input class="form-check-input" type="radio" name="wifiInfo" checked>
+              2.4 GHz wireless network information
+            </label></td>
+            <td colspan="3"><label class="form-check-label">
+              <input class="form-check-input" type="radio" name="wifiInfo">
+              5 GHz wireless network information
+            </label></td></tr>
+           <tr><td colspan="6">
+<h3 class="fw-bold"><p class="text-orange">WLAN Status</p></h3>
+<p class="text-muted">This page shows the WLAN current status.</p>
+<hr>
+<table style="width: 100%; border-collapse: collapse;">
+  <tbody>
+    <tr><td style="padding: 4px 8px;">Mode</td><td style="padding: 4px 8px;">AP</td></tr>
+    <tr><td style="padding: 4px 8px;">Band</td><td style="padding: 4px 8px;">2.4 GHz (B+G+N)</td></tr>
+    <tr><td style="padding: 4px 8px;">SSID</td><td style="padding: 4px 8px;">FTTH-54E8</td></tr>
+    <tr><td style="padding: 4px 8px;">Channel Number</td><td style="padding: 4px 8px;">11</td></tr>
+    <tr><td style="padding: 4px 8px;">Encryption</td><td style="padding: 4px 8px;">None</td></tr>
+    <tr><td style="padding: 4px 8px;">BSSID</td><td style="padding: 4px 8px;">04:11:19:5f:54:6c</td></tr>
+    <tr><td style="padding: 4px 8px;">Associated Clients</td><td style="padding: 4px 8px;">0</td></tr>
+    <tr><td colspan="2" style="height: 20px;"></td></tr>
+<tr><td colspan="2" style="height: 20px;"></td></tr>
+
+  </tbody>
+</table>
+</td></tr>
+           <tr><td colspan="6">
+         <h3 class="fw-bold text-orange mt-3">WLAN Packet Statistics</h3></td></tr>
+          
+              <tr>
+                <th class="bg-light text-center" style="width: 21%;"></th>
+      <th colspan="2" class="bg-light text-center" >Received (Rx)</th>
+      <th colspan="3" class="bg-light text-center">Sent (Tx)</th>
+              </tr>
+              <tr><td colspan="5">
+               
+                <table class="table table-bordered inner-table-wrapper">
+                    <tbody>
+               <tr><th>Interface</th><th>Rx pkt</th><th>Rx err</th><th>Rx drop</th>
+                <th>Tx pkt</th><th>Tx err</th><th>Tx drop</th>
+              </tr>
+            
+              <tr>
+                <td>wlan0</td>
+                <td>38</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+                
+                 </td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!--card 6-->
+ <div class="card shadow">
+          <div class="card-header bg-light">
+            <h5 class="card-title mb-0">
+             <i class="bi bi-gear-fill text-orange"></i> TR069 Report Status</h5>
+  <hr>
+  <small class="text-muted">This page is used to display the status information of TR069</small></div>
+  <div class="card-body p-2">
+    
+    <div class="table-responsive">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th colspan="4"><i class="bi bi-gear-fill text-orange"></i> TR069 Status</th>
+                <tr>
+                <th class="text-center">Inform Status</th>
+                <th class="text-center">ITMS connection request status</th></tr>
+                <tr>
+                <td class="bg-light">Unreported (DUT is booting)</td>
+                <td class="bg-light">No received remove connection request</td></tr>
+           
+        </tbody>
+
+    </table>
+    </div>
+   
+</div>
+    </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.querySelectorAll(".view-more-btn").forEach(button => {
+  const modalSelector = button.getAttribute("data-bs-target");
+  const modal = document.querySelector(modalSelector);
+
+  button.addEventListener("click", function () {
+    // Remove from all buttons first to avoid multiple white buttons
+    document.querySelectorAll(".view-more-btn").forEach(btn => btn.classList.remove("clicked"));
+    this.classList.add("clicked");
+  });
+
+  if (modal) {
+    modal.addEventListener("hidden.bs.modal", function () {
+      button.classList.remove("clicked");
+    });
+  }
+});
+</script>
+</body>
+</html>
